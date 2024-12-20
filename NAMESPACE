@@ -1,0 +1,21 @@
+#useDynLib(fsn, .registration = TRUE)
+
+importFrom("Hmisc", rcorr.cens)
+importFrom("MASS", polr)
+importFrom("nnet", multinom)
+importFrom("ordinal", clm)
+importFrom("quantreg", rq)
+importFrom("Rfast", nth, lmfit, omp, ompr, design_matrix, colaucs)
+importFrom("Rfast2", Sample.int)
+ importFrom("stats", binomial, cov, fitted, glm, lm, logLik, model.frame,
+            poisson, predict, qchisq, quantile, resid,  model.matrix, nlm,
+            optim, pchisq)
+importFrom("survival", survreg, coxph)
+
+import("doParallel")
+import("parallel")
+import("foreach")
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+
