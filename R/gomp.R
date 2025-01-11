@@ -1,8 +1,5 @@
 gomp <- function(y, x, xstand = TRUE, tol = qchisq(0.95, 1), test = "logistic", method = "ar2") {
 
-  oop <- options(warn = -1)
-  on.exit( options(oop) )
-
   if ( xstand )  x <- Rfast::standardise(x)
 
   if ( test == "normal" | test == "cor" ) {

@@ -1,9 +1,6 @@
 cv.gomp <- function(y, x, kfolds = 10, folds = NULL, tol = seq(4, 9, by = 1), task = "C", metric = NULL,
                     metricbbc = NULL, modeler = NULL, test = NULL, method = "ar2", B = 1) {
 
-    oop <- options(warn = -1)
-    on.exit( options(oop) )
-
     if ( is.null(tol) )   tol <- seq(4, 9, by = 1)
     tol <- sort(tol)
     ntol <- length(tol);
