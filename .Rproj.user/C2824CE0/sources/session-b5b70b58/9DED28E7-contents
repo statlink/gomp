@@ -106,6 +106,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \examples{
+set.seed(1234)
 # simulate a dataset with continuous data
 x <- matrix( rnorm(200 * 50), ncol = 50 )
 # the target feature is the last column of the dataset as a vector
